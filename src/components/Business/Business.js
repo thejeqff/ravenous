@@ -14,10 +14,10 @@ const business {
 }
 
 class Business extends React.Component {
-  render():
+  render() {
     return (<div className="Business">
   <div class="image-container">
-    <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
+    <img src={business.imageSrc} alt=''/>
   </div>
   <h2>{business.name}</h2>
   <div className="Business-information">
@@ -28,11 +28,12 @@ class Business extends React.Component {
     </div>
     <div className="Business-reviews">
       <h3>{business.category}</h3>
-      <h3 className="rating">4.5 stars}</h3>
+      <h3 className="rating">{business.rating}</h3>
       <p>{business.reviewCount}</p>
     </div>
   </div>
 </div>)
+  }
 }
 
 export default Business;
